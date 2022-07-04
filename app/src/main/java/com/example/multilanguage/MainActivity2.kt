@@ -8,8 +8,8 @@ class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-        StringResource.stringResource?.let {
-            textView2.text = it.get("complete_account_button_complete").toString()
-        }
+
+        textView2.text = StringResource.getString("complete_account_button_complete")
+
     }
 }

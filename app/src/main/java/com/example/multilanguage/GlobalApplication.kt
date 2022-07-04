@@ -6,14 +6,12 @@ import com.mycompany.plugins.example.common.android.AndroidSecurePref
 
 class GlobalApplication: Application() {
     companion object{
-       lateinit var globalContext: Context
        lateinit var readFileLanguage: ReadFileLanguage
     }
     override fun onCreate() {
         super.onCreate()
-        globalContext = applicationContext
-        AndroidSecurePref.initSharePreference(globalContext)
-        readFileLanguage = ReadFileLanguage.getInstance(globalContext)
+        AndroidSecurePref.initSharePreference(applicationContext)
+        readFileLanguage = ReadFileLanguage.getInstance(applicationContext)
 //        loadLanguageResource()
     }
 

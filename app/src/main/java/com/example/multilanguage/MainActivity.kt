@@ -46,9 +46,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun changeLanguageOfCurrentScreen() {
-        StringResource.stringResource?.let {
-            textView.text = it.get("complete_account_button_complete").toString()
-        }
+        textView.text = StringResource.getString("complete_account_button_complete")
     }
 
     private fun setUpSpinner() {

@@ -6,4 +6,8 @@ object StringResource {
     fun updateLanguage(languageType: LanguageType){
         stringResource = GlobalApplication.readFileLanguage.read(languageType)
     }
+
+    fun getString(stringKey: String)= stringResource?.let {
+       it.get(stringKey)?:"Unknown string key:${stringKey}"
+    }.toString()
 }
