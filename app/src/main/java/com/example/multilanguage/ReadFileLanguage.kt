@@ -19,12 +19,21 @@ class ReadFileLanguage private constructor(var context: Context){
         Log.d("HIEN", fileInString)
 
         // add to HashMap
-        val jsonObject = JSONObject(fileInString)
-        val duration = measureTime {
-            jsonToMap(jsonObject)
+        lateinit var jsonObject: JSONObject
+        try{
+             jsonObject = JSONObject(fileInString)
+        }catch (exception: Exception){
+            Log.d("HIEN", "Cannot convert string to json. Please check json format ${exception.message}")
+            return HashMap()
         }
-        Log.d("HIEN", "measure time fun jsonToMap: ${duration.inMilliseconds} + capacity of map: ")
+
+//        val duration = measureTime {
+//            jsonToMap(jsonObject)
+//        }
+//        Log.d("HIEN", "measure time fun jsonToMap: ${duration.inMilliseconds} + capacity of map: ")
         return jsonToMap(jsonObject)
+
+
 
     }
 

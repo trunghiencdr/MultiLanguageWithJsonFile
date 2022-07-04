@@ -4,7 +4,7 @@
   "cancel": "Cancel",
   "close": "Close",
   "complete_account_button_complete": "Confirm",
-  "complete_account_button_next": "Next",
+  "complete_account_button_next": "Next"
   "complete_account_field_error_already_owned": "The user appears to already be in a family.",
   "complete_account_field_error_already_subscribed": "The user appears to already be paying for an Olive subscription.",
   "complete_account_field_error_insufficient_quantity": "The owner does not have enough places in his subscription.",
