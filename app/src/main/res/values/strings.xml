@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MultiLanguage</string>
+    <string-array name="Languages">
+        <item>English</item>
+        <item>Kotlin</item>
+        <item>Swift</item>
+        <item>Python</item>
+        <item>Scala</item>
+        <item>Perl</item>
+    </string-array>
+</resources>
