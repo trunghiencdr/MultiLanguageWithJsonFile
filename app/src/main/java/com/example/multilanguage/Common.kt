@@ -50,8 +50,8 @@ inline fun <reified T : Enum<T>> enumNameToArray(): List<String> {
     return enumValues<T>().map { it.name }
 }
 
-fun getLanguageType(selectedItem: String) =
-    when (selectedItem) {
+fun getLanguageType(nameOfLanguageType: String) =
+    when (nameOfLanguageType) {
         LanguageType.English.name -> LanguageType.English
         LanguageType.Franch.name -> LanguageType.Franch
         else -> LanguageType.English
